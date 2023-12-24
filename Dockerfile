@@ -2,7 +2,7 @@
 FROM node:20 as builder
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /home/user/Codes/nestJsApp
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
@@ -24,3 +24,5 @@ WORKDIR /usr/src/app
 
 # Expose the port the app runs on
 EXPOSE 3000
+
+CMD ["npm", "run", "start"]
