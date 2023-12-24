@@ -19,13 +19,13 @@ For Linux users, create an alias for npm:
 
 
 ```bash
-alias npm='docker exec -it nestjsapp-app npm'
+alias npm='docker run -it -w /usr/src/app -v "$(pwd):/usr/src/app" nestjsapp-app npm'
 ```
 For Linux users, create an alias for nest:
 
 
 ```bash
-alias nest='docker exec -it nestjsapp-app nest'
+alias nest='docker run -it -w /usr/src/app -v "$(pwd):/usr/src/app" nestjsapp-app npm nest'
 ```
 Run the containers:
 
