@@ -1,4 +1,6 @@
-# Node.js Application with Docker
+# Your Nest.js Application Name
+
+## Introduction
 
 This project serves as a starting point for Node.js applications using Docker, offering an encapsulated, optimized, and scalable environment.
 
@@ -6,42 +8,38 @@ This project serves as a starting point for Node.js applications using Docker, o
 
 The project follows a standard Node.js application setup, providing a solid foundation for your apps.
 
-# Getting Started
+## Getting Started
 
 1. **Initialize your Node.js app in a Docker container:**
 
    ```bash
    docker run -it -w /usr/src/app -v "$(pwd):/usr/src/app" node:20 npm init -y
    ```
+For Linux users, create an alias for npm:
 
-2. **For Linux users, create an alias for npm:**
 
-   ```bash
-   alias npm='docker exec -it nestjsapp-app npm'
-   ```
+```bash
+alias npm='docker exec -it nestjsapp-app npm'
+```
+For Linux users, create an alias for nest:
 
-3. **For Linux users, create an alias for nest:**
 
-    ```bash
-    alias nest='docker exec -it nestjsapp-app nest'
-    ```
+```bash
+alias nest='docker exec -it nestjsapp-app nest'
+```
+Run the containers:
 
-4. **Run the containers:**
 
-   ```bash
-   docker-compose up
-   ```
+```bash
+docker-compose up
+```
 
-5. **Copy the .env.example to .env and set your environment variables.**
+Copy the .env.example to .env and set your environment variables.
 
-   ```bash
-   cp .env.example .env
-   ```
 
-# Why MongoDB?
+```bash
+cp .env.example .env
+```
 
+## Why MongoDB?
 MongoDB is included as a database for your Node.js application. It provides a scalable and flexible solution for handling data, making it a popular choice for many applications.
-
-Feel free to customize this project according to your specific requirements.
-
-Happy coding!
