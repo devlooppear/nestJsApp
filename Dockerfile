@@ -16,4 +16,4 @@ RUN npm i -g @nestjs/cli
 # Bundle app source
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start:dev"]
