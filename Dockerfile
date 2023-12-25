@@ -10,19 +10,10 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm install
 
+# Install Nest CLI
+RUN npm i -g @nestjs/cli
+
 # Bundle app source
 COPY . .
-
-# Use a smaller Node.js image for the final stage
-FROM node:20-alpine
-
-# Copy the app files from the builder stage
-COPY --from=builder /usr/src/app /usr/src/app
-
-# Set the working directory in the container
-WORKDIR /usr/src/app
-
-# Expose the port the app runs on
-EXPOSE 3000
 
 CMD ["npm", "run", "start"]
